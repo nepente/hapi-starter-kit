@@ -10,7 +10,11 @@
     "lint": "eslint ./"
   },
   "dependencies": {
-    "envalid": "2.2.0"
+    "envalid": "2.2.0",
+    "good": "7.0.1",
+    "good-console": "6.1.2",
+    "good-squeeze": "4.0.0",
+    "hapi": "13.4.1"
   },
   "devDependencies": {
     "eslint": "2.13.1",
