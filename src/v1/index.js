@@ -1,10 +1,20 @@
+const path = require('path');
+const glob = require('glob');
+
+function getFilePaths(pattern = '**/*-handler.js', cwd = __dirname, ignore) {
+  return glob.sync(pattern, { nodir: true, cwd, ignore })
+    .map(handlerPath => path.join(cwd, handlerPath));
+}
+
+function registerRoutes(server, handlerPath) {
+  server.route(require(handlerPath)); // eslint-disable-line global-require
+  delete require.cache[handlerPath];
+}
+
 exports.register = (server, options, next) => {
-  server.route({
-    method: 'GET',
-    path: '/',
-    handler(request, reply) {
-      reply();
-    },
+  const handlersPaths = getFilePaths();
+  handlersPaths.forEach((handlerPath) => {
+    registerRoutes(server, handlerPath);
   });
 
   next();
