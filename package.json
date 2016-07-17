@@ -7,6 +7,8 @@
   "scripts": {
     "start": "node index.js",
     "start:watch": "nodemon --exec 'npm start'",
+    "test": "npm run test:end-to-end",
+    "test:end-to-end": "NODE_ENV=test tape test/end-to-end/*.test.js",
     "lint": "eslint ./"
   },
   "dependencies": {
@@ -22,7 +24,8 @@
     "eslint-config-airbnb-base": "3.0.1",
     "eslint-plugin-import": "1.9.2",
     "git-scripts": "0.2.1",
-    "nodemon": "1.9.2"
+    "nodemon": "1.9.2",
+    "tape": "4.6.0"
   },
   "git": {
     "scripts": {
