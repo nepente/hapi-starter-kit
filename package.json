@@ -18,6 +18,7 @@
     "good-console": "6.1.2",
     "good-squeeze": "4.0.0",
     "hapi": "13.4.1",
+    "hapi-plugin-header": "0.9.3",
     "hapi-swagger": "6.1.0",
     "inert": "4.0.1",
     "joi": "9.0.0-3",

@@ -4,6 +4,7 @@ const vision = require('vision');
 const { HOST, PORT } = require('../env');
 const good = require('./plugins/good');
 const swagger = require('./plugins/swagger');
+const customHeaders = require('./plugins/custom-headers');
 const apiV1 = require('./v1/index');
 
 function createApp({ host, port } = { host: HOST, port: PORT }) {
@@ -12,6 +13,7 @@ function createApp({ host, port } = { host: HOST, port: PORT }) {
     inert,
     vision,
     swagger,
+    customHeaders,
   ];
 
   const server = new Hapi.Server({
