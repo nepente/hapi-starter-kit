@@ -1,10 +1,18 @@
 const Hapi = require('hapi');
+const inert = require('inert');
+const vision = require('vision');
 const { HOST, PORT } = require('../env');
 const good = require('./plugins/good');
+const swagger = require('./plugins/swagger');
 const apiV1 = require('./v1/index');
 
 function createApp({ host, port } = { host: HOST, port: PORT }) {
-  const plugins = [good];
+  const plugins = [
+    good,
+    inert,
+    vision,
+    swagger,
+  ];
 
   const server = new Hapi.Server({
     connections: {

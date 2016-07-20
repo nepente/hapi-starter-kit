@@ -19,5 +19,8 @@ module.exports = {
   method: 'GET',
   path: '/hello/{name}',
   handler: helloHandler,
-  config: { validate },
+  config: {
+    validate,
+    tags: ['api'],
+  },
 };
