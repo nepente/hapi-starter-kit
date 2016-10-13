@@ -15,23 +15,24 @@
   },
   "dependencies": {
     "envalid": "2.2.0",
-    "good": "7.0.1",
+    "glob": "7.1.1",
+    "good": "7.0.2",
     "good-console": "6.1.2",
-    "good-squeeze": "4.0.0",
-    "hapi": "13.4.1",
+    "good-squeeze": "5.0.0",
+    "hapi": "15.1.1",
     "hapi-plugin-header": "0.9.3",
-    "hapi-swagger": "6.1.0",
-    "inert": "4.0.1",
-    "joi": "9.0.0-3",
+    "hapi-swagger": "7.2.0",
+    "inert": "4.0.2",
+    "joi": "9.1.1",
     "vision": "4.1.0"
   },
   "devDependencies": {
-    "eslint": "2.13.1",
-    "eslint-config-airbnb-base": "3.0.1",
-    "eslint-plugin-import": "1.9.2",
+    "eslint": "3.7.1",
+    "eslint-config-airbnb-base": "8.0.0",
+    "eslint-plugin-import": "2.0.1",
     "husky": "0.11.9",
-    "istanbul": "0.4.4",
-    "nodemon": "1.9.2",
-    "tape": "4.6.0"
+    "istanbul": "0.4.5",
+    "nodemon": "1.11.0",
+    "tape": "4.6.2"
   }
 }

@@ -7,7 +7,7 @@ function getFilePaths(pattern = '**/*-handler.js', cwd = __dirname, ignore) {
 }
 
 function registerRoutes(server, handlerPath) {
-  server.route(require(handlerPath)); // eslint-disable-line global-require
+  server.route(require(handlerPath)); // eslint-disable-line max-len, global-require, import/no-dynamic-require
   delete require.cache[handlerPath];
 }
 

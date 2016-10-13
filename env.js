@@ -12,6 +12,7 @@ More information at https://12factor.net/config
 NEVER commit the .env file. If you need a starting point for developers use .env.example instead, but remember, NO SENSITIVE DATA.
 */
 const envalid = require('envalid');
+
 const { str, num } = envalid;
 
 /* For complete scheme options check https://github.com/af/envalid */
