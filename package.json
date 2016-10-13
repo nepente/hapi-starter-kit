@@ -10,7 +10,8 @@
     "test": "npm run test:end-to-end",
     "test:end-to-end": "NODE_ENV=test tape test/end-to-end/*.test.js",
     "coverage": "istanbul cover tape -- test/**/*.test.js",
-    "lint": "eslint ./"
+    "lint": "eslint ./",
+    "precommit": "npm run lint"
   },
   "dependencies": {
     "envalid": "2.2.0",
@@ -28,14 +29,9 @@
     "eslint": "2.13.1",
     "eslint-config-airbnb-base": "3.0.1",
     "eslint-plugin-import": "1.9.2",
-    "git-scripts": "0.2.1",
+    "husky": "0.11.9",
     "istanbul": "0.4.4",
     "nodemon": "1.9.2",
     "tape": "4.6.0"
-  },
-  "git": {
-    "scripts": {
-      "pre-commit": "npm run lint"
-    }
   }
 }
