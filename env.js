@@ -18,6 +18,7 @@ const { str, num } = envalid;
 /* For complete scheme options check https://github.com/af/envalid */
 module.exports = envalid.cleanEnv(process.env, {
   /* Not obligatory variable because it has a default value */
+  NODE_ENV: str({ default: 'development' }),
   HOST: str({ default: '127.0.0.1', desc: 'The host to bind to. Set to 0.0.0.0 if you wish external access.' }),
   PORT: num({ default: 3000, desc: 'The port to start the server on.' }),
   /* Obligatory variable, your service won't start if not set on environment or .env file. */
