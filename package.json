@@ -24,6 +24,7 @@
     "hapi-swagger": "7.2.0",
     "inert": "4.0.2",
     "joi": "9.1.1",
+    "ramda": "0.22.1",
     "vision": "4.1.0"
   },
   "devDependencies": {
